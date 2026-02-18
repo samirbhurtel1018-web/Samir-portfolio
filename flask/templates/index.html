@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Samir Bhurtel Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar">
+    <h1 class="logo">Samir Bhurtel</h1>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/skills">Skills</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Homepage main section -->
+<section class="home">
+
+    <img class="profile" src="{{ url_for('static', filename='profile.jpeg') }}" alt="Samir Bhurtel">
+
+    <h1 class="name">Samir Bhurtel</h1>
+
+    <p class="title">
+        CSIT Student | Python Beginner | Future Software Developer
+    </p>
+
+    <p class="intro">
+        Welcome to my personal portfolio website. I am learning Python Flask and Web Development.
+        This website is built using HTML, CSS, JavaScript, and Python Flask.
+    </p>
+
+</section>
+
+</body>
+</html>
