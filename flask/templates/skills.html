@@ -1,56 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Skills - Samir Bhurtel</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-<nav class="navbar">
-    <h1 class="logo">Samir Bhurtel</h1>
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/skills">Skills</a>
-        <a href="/projects">Projects</a>
-        <a href="/contact">Contact</a>
-    </div>
-</nav>
+{% block content %}
 
-<section class="section">
-
+<div class="skills-section">
     <h1 class="section-title">My Skills</h1>
 
-    <div class="cards">
+    <p class="skills-intro">
+        I am currently studying BSc.CSIT at Patan Multiple Campus. I am learning web development, programming, and version control. Here are some of the skills I have been developing so far:
+    </p>
 
-        <div class="card">
-            <h2>Python</h2>
-            <p>Beginner level knowledge of Python programming.</p>
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>Python</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;">75%</div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>HTML</h2>
-            <p>Building website structure using HTML.</p>
+        <div class="skill-card">
+            <h3>Flask</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;">70%</div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>CSS</h2>
-            <p>Designing beautiful websites with CSS.</p>
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%;">85%</div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>JavaScript</h2>
-            <p>Adding interactivity to websites.</p>
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;">80%</div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>Flask</h2>
-            <p>Building backend using Python Flask.</p>
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;">60%</div>
+            </div>
         </div>
 
+        <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;">70%</div>
+            </div>
+        </div>
     </div>
 
-</section>
+    <!-- Additional Content -->
+    <div class="skills-extra">
+        <h2>Other Skills & Tools</h2>
+        <ul>
+            <li>Problem Solving & Algorithms</li>
+            <li>Basic SQL & Databases</li>
+            <li>Linux Terminal & Command Line</li>
+            <li>Debugging & Testing Code</li>
+        </ul>
 
-</body>
-</html>
+        <p>
+            I am continuously learning and building projects to strengthen these skills.  
+            My goal is to become proficient in full-stack development and create real-world applications.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

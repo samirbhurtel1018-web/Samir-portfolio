@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Dashboard</h1>
+
+<a href="/logout">Logout</a>
+
+<h2>Messages:</h2>
+
+{% for message in messages %}
+
+<div>
+
+<p>Name: {{ message.name }}</p>
+
+<p>Email: {{ message.email }}</p>
+
+<p>Message: {{ message.message }}</p>
+
+<hr>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

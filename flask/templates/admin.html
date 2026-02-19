@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section">
+
+<h1>Admin Panel</h1>
+
+<form method="POST">
+
+<input name="title"
+placeholder="Project title"
+required>
+
+<br><br>
+
+<input name="description"
+placeholder="Description"
+required>
+
+<br><br>
+
+<input name="github"
+placeholder="GitHub link"
+required>
+
+<br><br>
+
+<input name="image"
+placeholder="Image filename (example: calc.png)"
+required>
+
+<br><br>
+
+<button class="btn">
+Add Project
+</button>
+
+</form>
+
+<p>
+Upload image manually into:
+static/projects/
+</p>
+
+</section>
+
+{% endblock %}

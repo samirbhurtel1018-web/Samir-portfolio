@@ -1,26 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About Samir</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
+{% extends "base.html" %}
 
-<!-- Navigation bar -->
-<nav>
-    <a href="/">Home</a> |
-    <a href="/about">About</a> |
-    <a href="/skills">Skills</a> |
-    <a href="/projects">Projects</a> |
-    <a href="/contact">Contact</a>
-</nav>
-<hr>
+{% block content %}
 
-<section>
-    <h1>About Me</h1>
-    <p>Hello! I am Samir Bhurtel, a CSIT student at Patan Multiple College, currently in 3rd semester.</p>
-    <p>I am learning backend development using Python Flask and web technologies.</p>
-</section>
+<div class="about-section">
+    <h1 class="section-title">About Me</h1>
 
-</body>
-</html>
+    <!-- Intro -->
+    <div class="about-intro">
+        <p>Hello! I am <strong>Samir Bhurtel</strong>, a BSc.CSIT student at Patan Multiple Campus. I am passionate about coding, web development, and building real-world applications. I am constantly learning new technologies and improving my programming skills.</p>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="about-profile">
+        <img src="{{ url_for('static', filename='profile.jpeg') }}" alt="Profile Picture" class="profile-img">
+        <div class="profile-details">
+            <h2>Samir Bhurtel</h2>
+            <p><strong>Degree:</strong> BSc.CSIT(Curently Studying)</p>
+            <p><strong>Campus:</strong> Patan Multiple Campus</p>
+            <p><strong>Email:</strong> samirbhurtel1018@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Skills and Interests -->
+    <div class="about-skills">
+        <h2>Skills & Interests</h2>
+        <div class="skills-list">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Flask</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Git & GitHub</span>
+        </div>
+        <p class="about-extra">
+            I enjoy solving problems, learning algorithms, and exploring new technologies. In my free time, I love reading about programming trends, contributing to projects, and enhancing my web development skills.
+        </p>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="about-hobbies">
+        <h2>Hobbies & Activities</h2>
+        <ul>
+            <li>Coding Challenges & Hackathons</li>
+            <li>Reading Tech Blogs</li>
+            <li>Playing Cricket</li>
+            <li>Learning New Programming Languages</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

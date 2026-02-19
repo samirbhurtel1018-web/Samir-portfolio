@@ -1,47 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Projects - Samir Bhurtel</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-<nav class="navbar">
-    <h1 class="logo">Samir Bhurtel</h1>
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/skills">Skills</a>
-        <a href="/projects">Projects</a>
-        <a href="/contact">Contact</a>
-    </div>
-</nav>
+{% block content %}
 
-<section class="section">
-
+<div class="projects-section">
     <h1 class="section-title">My Projects</h1>
 
-    <div class="cards">
+    <p class="projects-intro">
+        Here are some of the projects I have built while learning programming and web development.  
+        These projects showcase my skills in Python, JavaScript, and Flask.
+    </p>
 
-        <div class="card">
-            <h2>Python Calculator</h2>
-            <p>A simple calculator made using Python.</p>
+    <div class="projects-grid">
+        <!-- Python Calculator -->
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='projects/calculator.jpg') }}" alt="Python Calculator">
+            <div class="project-info">
+                <h3>Python Calculator</h3>
+                <p>A simple calculator application built using Python. Supports basic arithmetic operations.</p>
+                <span class="tech">Python</span>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>Portfolio Website</h2>
-            <p>This personal website built using Flask.</p>
+        <!-- Portfolio Website -->
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='projects/portfolio.jpg') }}" alt="Portfolio Website">
+            <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>My personal portfolio website developed using Flask, HTML, CSS, and JavaScript.</p>
+                <span class="tech">Flask, HTML, CSS, JS</span>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>JavaScript Game</h2>
-            <p>A basic game made using JavaScript.</p>
+        <!-- JavaScript Game -->
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='projects/game.jpg') }}" alt="Tic Tac Toe Game">
+            <div class="project-info">
+                <h3>Tic Tac Toe Game</h3>
+                <p>A browser-based Tic Tac Toe game implemented using JavaScript. Fun and interactive gameplay.</p>
+                <span class="tech">JavaScript, HTML, CSS</span>
+            </div>
         </div>
-
     </div>
 
-</section>
+    <!-- Extra Content -->
+    <div class="projects-extra">
+        <h2>Other Projects & Learning</h2>
+        <p>
+            I continuously work on new projects to improve my programming skills and learn new technologies.  
+            I enjoy creating practical applications and experimenting with different programming languages.  
+            Future projects include a blog application using Flask and a small AI-based Python project.
+        </p>
+    </div>
+</div>
 
-</body>
-</html>
-
+{% endblock %}

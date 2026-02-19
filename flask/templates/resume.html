@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="resume-section">
+    <h1 class="section-title">My Resume</h1>
+
+    <!-- Header -->
+    <div class="resume-header">
+        <h2>Samir Bhurtel</h2>
+        <p>BSc.CSIT Student | Patan Multiple Campus | Tribhuvan University</p>
+        <!-- Download Resume Button -->
+        <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn" download>Download Resume (PDF)</a>
+    </div>
+
+    <!-- Education -->
+    <div class="resume-card">
+        <h3>Education</h3>
+        <ul>
+            <li>
+                <strong>BSc.CSIT</strong> – IOST, Patan Multiple Campus, Tribhuvan University
+            </li>
+            <li>
+                <strong>+2 Computer Science</strong> – Orchid College of Science and Management
+            </li>
+        </ul>
+    </div>
+
+    <!-- Skills -->
+    <div class="resume-card">
+        <h3>Skills</h3>
+        <ul>
+            <li>Python (Intermediate)</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript (Basics)</li>
+            <li>Flask Web Development</li>
+        </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="resume-card">
+        <h3>Projects</h3>
+        <ul>
+            <li>Python Calculator – A simple calculator application built using Python.</li>
+            <li>Tic Tac Toe Game – Built using JavaScript.</li>
+            <li>Portfolio Website – Developed using Python Flask, HTML, CSS, and JS.</li>
+        </ul>
+    </div>
+
+    <!-- Hobbies & Interests -->
+    <div class="resume-card">
+        <h3>Hobbies & Interests</h3>
+        <ul>
+            <li>Playing Cricket and Outdoor Games</li>
+            <li>Staying Physically Fit</li>
+            <li>Learning New Programming Skills</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

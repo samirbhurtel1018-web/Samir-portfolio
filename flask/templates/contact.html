@@ -1,45 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact - Samir Bhurtel</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-<nav class="navbar">
-    <h1 class="logo">Samir Bhurtel</h1>
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/skills">Skills</a>
-        <a href="/projects">Projects</a>
-        <a href="/contact">Contact</a>
+{% block content %}
+
+<div class="contact-section">
+    <h1>Contact Me</h1>
+
+    <div class="contact-info">
+        <p>Email: <a href="mailto:samirbhurtel1018@gmail.com">samirbhurtel1018@gmail.com</a></p>
+        <p>
+            GitHub: 
+            <a href="https://github.com/samirbhurtel" target="_blank">
+                github.com/samirbhurtel
+            </a>
+        </p>
+        <p>
+            LinkedIn: 
+            <a href="https://linkedin.com/in/samirbhurtel" target="_blank">
+                linkedin.com/in/samirbhurtel
+            </a>
+        </p>
     </div>
-</nav>
 
-<section class="section">
+    <!-- Flash message for submission -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-message">
+          {{ messages[0] }}
+        </div>
+      {% endif %}
+    {% endwith %}
 
-    <h1 class="section-title">Contact Me</h1>
-    {% if success %}
-    <p style="color: green; font-weight: bold;">
-    Your message has been sent successfully!
-    </p>
-    {% endif %}
-
-
-    <form method="POST" class="contact-form">
-
-        <input type="text" name="name" placeholder="Your Name" required>
-
-        <input type="email" name="email" placeholder="Your Email" required>
-
+    <!-- Contact form -->
+    <form method="POST" action="{{ url_for('contact') }}" class="contact-form">
+        <input name="name" placeholder="Your Name" required>
+        <input name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
-
         <button type="submit">Send Message</button>
-
     </form>
+</div>
 
-</section>
-
-</body>
-</html>
+{% endblock %}

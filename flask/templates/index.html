@@ -1,40 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Samir Bhurtel Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-<!-- Navigation bar -->
-<nav class="navbar">
-    <h1 class="logo">Samir Bhurtel</h1>
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/skills">Skills</a>
-        <a href="/projects">Projects</a>
-        <a href="/contact">Contact</a>
-    </div>
-</nav>
+{% block content %}
 
-<!-- Homepage main section -->
-<section class="home">
+<section class="hero">
 
-    <img class="profile" src="{{ url_for('static', filename='profile.jpeg') }}" alt="Samir Bhurtel">
+<div class="hero-text">
 
-    <h1 class="name">Samir Bhurtel</h1>
+<h1>Hi, I'm Samir Bhurtel</h1>
 
-    <p class="title">
-        CSIT Student | Python Beginner | Future Software Developer
-    </p>
+<h2>Python Flask Developer</h2>
 
-    <p class="intro">
-        Welcome to my personal portfolio website. I am learning Python Flask and Web Development.
-        This website is built using HTML, CSS, JavaScript, and Python Flask.
-    </p>
+<p>
+
+I create modern, responsive and professional websites using
+Python, Flask, HTML, CSS and JavaScript.
+
+</p>
+
+<div class="buttons">
+
+<a href="/projects" class="primary-btn">
+
+View Projects
+
+</a>
+
+<a href="/resume" class="secondary-btn">
+
+Download Resume
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image-container">
+
+<img src="{{ url_for('static', filename='profile.jpeg') }}"
+class="hero-image">
+
+</div>
 
 </section>
 
-</body>
-</html>
+{% endblock %}
